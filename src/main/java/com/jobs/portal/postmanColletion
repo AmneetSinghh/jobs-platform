@@ -1,0 +1,16 @@
+localhost:8080/jobs/add
+{
+    "jobRole" : "SDE",
+    "jobDescription":"sde jobDescription",
+    "baseSalary":"10000",
+    "maxEarnings":"20000",
+    "companyName": "google"
+}
+
+
+localhost:8080/company/add
+
+{
+    "name":"google"
+}
+

@@ -2,6 +2,7 @@ package com.jobs.portal.service;
 
 import com.jobs.portal.entity.Company;
 import com.jobs.portal.model.CompanyModel;
+import com.jobs.portal.model.DummyModel;
 import com.jobs.portal.repository.ICompanyDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -23,6 +24,10 @@ public class CompanyService {
     @Autowired
     ICompanyDao companyDao;
 
+
+    @Autowired
+    DummyModel dummyModel;
+
     public void add(CompanyModel companyModel){
 
         /* Make entity object */
@@ -30,4 +35,11 @@ public class CompanyService {
         com.setName(companyModel.getName());
         companyDao.save(com);// it inserts into database.
     }
+
+    public Company getCompanyByName(String name){
+        return companyDao.findByName(name);
+    }
+
+
+
 }

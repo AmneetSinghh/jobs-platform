@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 public class CompanyController {
 
     @Autowired
-    CompanyService companyService;
+    CompanyService companyService;// by default null value.
 
     @PostMapping("/add")
     public ResponseEntity<Object> add(@RequestBody CompanyModel companyModel) {
